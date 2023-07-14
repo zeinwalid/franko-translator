@@ -28,7 +28,7 @@ body{
     flex-basis:50%;
 }
 .first-row{
-    background-image: url(./bcg.png);
+    background-image: url(./bcg.webp);
     background-position: center;
     background-size: cover;
     display: flex;

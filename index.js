@@ -65,29 +65,34 @@ function replaceEnglishWithArabic(string) {
 let translateBtn = document.getElementById("translatebtn");
 let text = document.getElementById("text");
 let modelBox = document.getElementById("modelBox")
+let okayBtn = document.getElementById("okayBtn");
+
+okayBtn.onclick = () =>{
+    modelBox.classList.remove("active")
+}
+
+function remove (){
+    modelBox.classList.remove("active")
+}
 translateBtn.addEventListener("click",()=>{
 
     modelBox.classList.add("active")
  
         if(text.value != ""){
             modelBox.innerHTML = `
-        <h1>Translation:</h1>
-        <div class= "text">
+                <h1>Translation:</h1>
+                <div class= "text">
+                
+                <p>${replaceEnglishWithArabic(text.value)}</p>
+                </div>
+                <div class = "button-holder">
+                    <button class = "btn" id = "okayBtn" onclick = remove()>okay</button>
+                </div>
+            `
+            modelBox.classList.add("active")
         
-           <p>${replaceEnglishWithArabic(text.value)}</p>
-        </div>
-        <div class = "button-holder">
-            <button class = "btn" id = "okayBtn">okay</button>
-        </div>
-       `
-       modelBox.classList.add("active")
-       console.log(replaceEnglishWithArabic(text.value))
         }
+
 
     })
 
-let okayBtn = document.getElementById("okayBtn");
-
-okayBtn.onclick = () =>{
-    modelBox.classList.remove("active")
-}
