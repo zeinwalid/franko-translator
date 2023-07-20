@@ -76,9 +76,9 @@ console.log(translatedText);
 
 let frankoInput = document.getElementById("frankoInput")
 let arabicInput = document.getElementById("arabicInput")
-frankoInput.onkeyup = ()=>{
+frankoInput.addEventListener("keyup",()=>{
     arabicInput.value = replaceEnglishWithArabic(frankoInput.value)
-}
+})
 const body = document.body;
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
     body.classList.add("dark-mode");
