@@ -76,7 +76,8 @@ console.log(translatedText);
 
 let frankoInput = document.getElementById("frankoInput")
 let arabicInput = document.getElementById("arabicInput")
-frankoInput.addEventListener("keyup",()=>{
+let translateBtn = document.getElementById("translateBtn")
+translateBtn.addEventListener("click",()=>{
     arabicInput.value = replaceEnglishWithArabic(frankoInput.value)
 })
 const body = document.body;

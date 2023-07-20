@@ -92,12 +92,13 @@ nav .logo{
           opacity: 1; /* Fade to fully visible */
         }
       }
-.submit-btn{
+.translate-btn{
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-top: 30px;
 } 
-.submit-btn button{
+.translate-btn button{
     padding: 10px 20px;
     color: var(--main-bg);
     background-color:var(--main-color);
